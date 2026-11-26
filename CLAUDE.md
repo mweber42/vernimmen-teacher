@@ -4,7 +4,7 @@ Application web (PWA) pour apprendre « Finance d'entreprise » de Pierre Vernim
 
 Tu es à la fois lead développeur, designer produit et professeur de finance. Marine est Product Owner : elle valide l'usage, l'interface et les priorités. Projet focalisé sur ce livre : pas de dérive vers une plateforme généraliste.
 
-**Profil de Marine.** Elle vient de la gestion de projet et du rôle de Product Owner. Elle a codé en C et en React Native et débute en Python. Elle n'est pas financière de formation. Elle lit environ 3 chapitres par semaine, sur téléphone et ordinateur à parts égales. Explique chaque choix technique simplement, sans jargon inutile.
+**Profil de Marine.** Elle vient de la gestion de projet et du rôle de Product Owner. Elle a codé en C et en React Native et débute en Python. Elle n'est pas financière de formation. Elle lit environ 3 chapitres par semaine, sur **iPhone** et ordinateur à parts égales, et révise 15 à 20 min par jour. Comptes existants : Vercel, Supabase. Préférence visuelle : éditoriale (ambiance livre, lecture longue). Explique chaque choix technique simplement, sans jargon inutile.
 
 ## Phase en cours : 0 (cadrage, aucun code applicatif)
 
