@@ -1,37 +1,28 @@
 ---
-description: Préparer un chapitre avant lecture (fiche + questions)
+description: Générer tout le contenu d'un chapitre (cours, fiche, questions, notions, glossaire, depuis 2016)
 argument-hint: <numéro de chapitre> [photo de la table détaillée]
 ---
 
-Prépare le chapitre **$ARGUMENTS** du Vernimmen, en suivant `CLAUDE.md`.
+Prépare le contenu du chapitre **$ARGUMENTS**, en suivant `CLAUDE.md`.
 
-1. **Plan.** Lance `python3 outils/prof.py chapitre <N>`. Si le chapitre n'existe pas, arrête-toi et dis-le. Si `data/questions/NN.json` ou `fiches/NN.md` existe déjà, demande avant d'écraser.
-2. **Sections.**
-   - Si une photo de la table détaillée est jointe, suis ses sections.
-   - Sinon, déduis-les du titre et de la place du chapitre. Retiens-les pour la sortie terminal.
-3. **Vérifications.** Contrôle ce qui a pu changer depuis 2016 sur ce sujet (liste de `CLAUDE.md`), sur des sources autorisées uniquement. Si tu utilises des chiffres actuels (taux, primes, fiscalité), donne-les avec leur source et la date. Si la recherche web est indisponible, marque `À vérifier` et dis-le.
-4. **Calculs.** Écris `calculs/NN.py`. Il produit tous les chiffres de l'exemple et des questions de calcul. Exécute-le et reprends les résultats tels quels.
-5. **Fiche.** Écris `fiches/NN.md` selon `modeles/fiche.md`, en 1 à 2 pages. Dépendances : rappel en une ligne des notions déjà vues (`notions_existantes`).
-6. **Notions.** Ajoute les notions du chapitre dans `data/notions.json` (format décrit dans `README.md`), avec `niveau: "decouverte"`. Mets dans `depend_de` les seules dépendances réelles.
-7. **Glossaire.** Ajoute les termes dans `data/glossaire.json` : FR, EN, définition courte, chapitre et notion. Pas de doublon d'un terme existant.
-8. **Questions.** Écris `data/questions/NN.json` selon `modeles/questions.json` : 12 à 16 questions. Chaque lot contient au moins :
-   - 3 `qcm`,
-   - 2 `vrai-faux`,
-   - 2 `calcul`,
-   - 1 `ouverte`,
-   - 1 `liaison` (vers un chapitre déjà vu, s'il y en a),
-   - 1 `cas`,
-   - 2 `carte`.
+**Prérequis.** Le format des fichiers de contenu et le schéma de validation doivent avoir été validés par Marine (fin de phase 0 et phase 1). Sinon, arrête-toi et dis-le en une ligne.
 
-   Les distracteurs sont plausibles. Les questions portent sur l'état actuel. Une `explication` pour chaque question.
-9. **Contrôle.** Lance `python3 outils/prof.py valider` et corrige jusqu'à obtenir `OK`.
-10. **Suivi.**
-    - Lance `python3 outils/prof.py statut <N> prepare`. Ajoute `--table-detaillee` si la photo a été fournie.
-    - Ajoute une ligne à `PROGRESSION.md`.
-    - Fais un commit `prepare: chapitre N`, puis un push.
+1. **Plan.** Lis le chapitre dans `content/livre.json` : titre, partie, titre de partie, pages. S'il n'existe pas, arrête-toi. Si du contenu existe déjà pour ce chapitre, demande avant d'écraser.
+2. **Sections.** Suis la photo de la table détaillée si elle est jointe. Sinon, déduis les sections du titre et de la place du chapitre, et retiens-les pour les signaler.
+3. **Vérifications.** Contrôle ce qui a changé depuis 2016 (liste de `CLAUDE.md`), sur des sources autorisées uniquement, avec la date de consultation. Si la recherche est impossible, marque `À vérifier` et dis-le.
+4. **Calculs.** Écris le script Python du chapitre, qui produit tous les chiffres du cours et des questions. Exécute-le et reprends ses résultats tels quels.
+5. **Contenu.** Rédige :
+   - le cours ;
+   - la fiche, une page maximum ;
+   - 10 à 20 questions, avec au moins une de chaque type : QCM, vrai/faux, calcul, ouverte, mini-cas, liaison ;
+   - les notions et leurs dépendances (uniquement les dépendances réelles) ;
+   - les termes du glossaire (sans doublons) ;
+   - la rubrique « Ce qui a changé depuis 2016 ».
+6. **Validation.** Lance la vérification du schéma et corrige jusqu'à ce qu'elle passe.
+7. **Git.** Fais un commit `prepare: chapitre N`, puis un push.
 
-**Sortie terminal : 5 lignes maximum.**
-- Ligne 1 : `Ch. N prêt : fiches/NN.md · X questions`.
-- Si les sections ont été supposées : une ligne qui commence par `Sections supposées :`.
+**Sortie : 5 lignes maximum.**
+- Ligne 1 : `Ch. N prêt : X questions, Y notions`.
+- Si les sections ont été supposées : une ligne `Sections supposées : …`.
 - Puis ce qu'il faut surveiller pendant la lecture.
-- Signale tout écart d'étape, push compris.
+- Signale tout écart d'étape.

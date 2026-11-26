@@ -192,7 +192,6 @@
       "page_debut": 1,
       "page_fin": 16,
       "nb_pages": 16,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -203,7 +202,6 @@
       "page_debut": 21,
       "page_fin": 30,
       "nb_pages": 10,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -214,7 +212,6 @@
       "page_debut": 31,
       "page_fin": 46,
       "nb_pages": 16,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -225,7 +222,6 @@
       "page_debut": 47,
       "page_fin": 64,
       "nb_pages": 18,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -236,7 +232,6 @@
       "page_debut": 65,
       "page_fin": 88,
       "nb_pages": 24,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -247,7 +242,6 @@
       "page_debut": 91,
       "page_fin": 102,
       "nb_pages": 12,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -258,7 +252,6 @@
       "page_debut": 103,
       "page_fin": 124,
       "nb_pages": 22,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -269,7 +262,6 @@
       "page_debut": 125,
       "page_fin": 168,
       "nb_pages": 44,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -280,7 +272,6 @@
       "page_debut": 171,
       "page_fin": 196,
       "nb_pages": 26,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -291,7 +282,6 @@
       "page_debut": 197,
       "page_fin": 224,
       "nb_pages": 28,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -302,7 +292,6 @@
       "page_debut": 225,
       "page_fin": 242,
       "nb_pages": 18,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -313,7 +302,6 @@
       "page_debut": 243,
       "page_fin": 270,
       "nb_pages": 28,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -324,7 +312,6 @@
       "page_debut": 271,
       "page_fin": 286,
       "nb_pages": 16,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -335,7 +322,6 @@
       "page_debut": 287,
       "page_fin": 306,
       "nb_pages": 20,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -346,7 +332,6 @@
       "page_debut": 307,
       "page_fin": 320,
       "nb_pages": 14,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -357,7 +342,6 @@
       "page_debut": 323,
       "page_fin": 346,
       "nb_pages": 24,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -368,7 +352,6 @@
       "page_debut": 349,
       "page_fin": 360,
       "nb_pages": 12,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -379,7 +362,6 @@
       "page_debut": 361,
       "page_fin": 370,
       "nb_pages": 10,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -390,7 +372,6 @@
       "page_debut": 371,
       "page_fin": 380,
       "nb_pages": 10,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -401,7 +382,6 @@
       "page_debut": 381,
       "page_fin": 396,
       "nb_pages": 16,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -412,7 +392,6 @@
       "page_debut": 399,
       "page_fin": 414,
       "nb_pages": 16,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -423,7 +402,6 @@
       "page_debut": 415,
       "page_fin": 432,
       "nb_pages": 18,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -434,7 +412,6 @@
       "page_debut": 433,
       "page_fin": 454,
       "nb_pages": 22,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -445,7 +422,6 @@
       "page_debut": 457,
       "page_fin": 480,
       "nb_pages": 24,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -456,7 +432,6 @@
       "page_debut": 481,
       "page_fin": 500,
       "nb_pages": 20,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -467,7 +442,6 @@
       "page_debut": 501,
       "page_fin": 524,
       "nb_pages": 24,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -478,7 +452,6 @@
       "page_debut": 525,
       "page_fin": 548,
       "nb_pages": 24,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -489,7 +462,6 @@
       "page_debut": 549,
       "page_fin": 568,
       "nb_pages": 20,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -500,7 +472,6 @@
       "page_debut": 569,
       "page_fin": 598,
       "nb_pages": 30,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -511,7 +482,6 @@
       "page_debut": 601,
       "page_fin": 622,
       "nb_pages": 22,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -522,7 +492,6 @@
       "page_debut": 623,
       "page_fin": 640,
       "nb_pages": 18,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -533,7 +502,6 @@
       "page_debut": 641,
       "page_fin": 658,
       "nb_pages": 18,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -544,7 +512,6 @@
       "page_debut": 659,
       "page_fin": 678,
       "nb_pages": 20,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -555,7 +522,6 @@
       "page_debut": 679,
       "page_fin": 692,
       "nb_pages": 14,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -566,7 +532,6 @@
       "page_debut": 693,
       "page_fin": 726,
       "nb_pages": 34,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -577,7 +542,6 @@
       "page_debut": 731,
       "page_fin": 744,
       "nb_pages": 14,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -588,7 +552,6 @@
       "page_debut": 745,
       "page_fin": 762,
       "nb_pages": 18,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -599,7 +562,6 @@
       "page_debut": 763,
       "page_fin": 784,
       "nb_pages": 22,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -610,7 +572,6 @@
       "page_debut": 785,
       "page_fin": 806,
       "nb_pages": 22,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -621,7 +582,6 @@
       "page_debut": 809,
       "page_fin": 826,
       "nb_pages": 18,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -632,7 +592,6 @@
       "page_debut": 827,
       "page_fin": 846,
       "nb_pages": 20,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -643,7 +602,6 @@
       "page_debut": 847,
       "page_fin": 860,
       "nb_pages": 14,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -654,7 +612,6 @@
       "page_debut": 861,
       "page_fin": 880,
       "nb_pages": 20,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -665,7 +622,6 @@
       "page_debut": 885,
       "page_fin": 906,
       "nb_pages": 22,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -676,7 +632,6 @@
       "page_debut": 907,
       "page_fin": 932,
       "nb_pages": 26,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -687,7 +642,6 @@
       "page_debut": 933,
       "page_fin": 946,
       "nb_pages": 14,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -698,7 +652,6 @@
       "page_debut": 947,
       "page_fin": 962,
       "nb_pages": 16,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -709,7 +662,6 @@
       "page_debut": 963,
       "page_fin": 994,
       "nb_pages": 32,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -720,7 +672,6 @@
       "page_debut": 995,
       "page_fin": 1014,
       "nb_pages": 20,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -731,7 +682,6 @@
       "page_debut": 1015,
       "page_fin": 1032,
       "nb_pages": 18,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -742,7 +692,6 @@
       "page_debut": 1033,
       "page_fin": 1056,
       "nb_pages": 24,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -753,7 +702,6 @@
       "page_debut": 1059,
       "page_fin": 1074,
       "nb_pages": 16,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -764,7 +712,6 @@
       "page_debut": 1075,
       "page_fin": 1096,
       "nb_pages": 22,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -775,7 +722,6 @@
       "page_debut": 1097,
       "page_fin": 1124,
       "nb_pages": 28,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     },
     {
@@ -786,7 +732,6 @@
       "page_debut": 1125,
       "page_fin": 1138,
       "nb_pages": 14,
-      "statut": "a-preparer",
       "table_detaillee_fournie": false
     }
   ],
@@ -825,5 +770,6 @@
   "alertes": [
     "À vérifier : le Glossaire du livre ne ferait que 2 pages (p. 1161-1162), ce qui est court. Erreur de lecture possible de la page 1161 ou 1163.",
     "Le chapitre 1 n'appartient à aucune partie (pages liminaires). Le chapitre 16 ouvre la Partie 2 hors Titre."
-  ]
+  ],
+  "_note": "Structure de référence du livre. Le statut de lecture d'un chapitre est une donnée de progression, gérée par l'application, pas ici."
 }

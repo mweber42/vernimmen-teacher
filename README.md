@@ -1,53 +1,38 @@
-# vernimmen-teacher
+# Vernimmen Teacher
 
-Compagnon d'apprentissage pour « Finance d'entreprise » de Pierre Vernimmen (Dalloz, édition 2016). Il produit des fiches par chapitre, des quiz et un suivi de progression. Il fonctionne avec Claude Code : le professeur, c'est Claude, avec les règles de `CLAUDE.md`.
+Application web pour apprendre le Vernimmen « Finance d'entreprise » : cours et fiches par chapitre, révisions espacées et suivi de progression.
 
-## Utilisation (phase 1)
+L'application accompagne la lecture de l'édition 2016 (Dalloz, papier). Elle doit permettre :
+- **Lire** le cours et la fiche de révision de chaque chapitre, enseignés selon les règles **actuelles**, avec ce qui a changé depuis 2016.
+- **Réviser** avec des questions variées (QCM, vrai/faux, calcul, question ouverte, mini-cas, liaison entre notions), planifiées par répétition espacée.
+- **Suivre** sa progression : chapitres, notions maîtrisées, points faibles, régularité.
 
-| Commande | Quand | Effet |
+Elle s'utilise sur téléphone et sur ordinateur. Elle est installable sur l'écran d'accueil et ne dépend d'aucune API d'IA. Le contenu pédagogique est généré par Claude Code dans ce dépôt, puis intégré à l'application à chaque déploiement.
+
+## État du projet
+
+**Phase 0 : cadrage produit et interface, en cours.** L'application n'a pas encore de code.
+
+| Phase | Objectif | État |
 |---|---|---|
-| `/prepare 12` (+ photo de la table détaillée, si disponible) | avant la lecture | crée `fiches/12.md`, les questions, les notions et le glossaire ; affiche 5 lignes à surveiller |
-| `/quiz 12` ou `/quiz mix` | après la lecture | 8 à 12 questions, corrigées une par une ; met à jour la progression |
-| `/explique bfr` | en cas de blocage | réexplique la notion sous un autre angle, avec un autre exemple |
+| 0. Cadrage | Parcours utilisateur, écrans, maquettes HTML, architecture et modèle de données | en cours |
+| 1. POC | Boucle lire → réviser → voir sa progression, sur téléphone, avec les chapitres 1 et 2 | à venir |
+| 2. V1 | Toutes les fonctionnalités, synchronisation entre appareils, signalements, coach quotidien | à venir |
+| 3. Contenu | Chapitres au rythme de lecture, examens de fin de partie | à venir |
 
-Outil en ligne de commande (Python 3, bibliothèque standard uniquement) :
+## Contenu du dépôt
 
-```bash
-python3 outils/prof.py chapitre 12
-```
-
-```bash
-python3 outils/prof.py valider
-```
-
-```bash
-python3 outils/prof.py etat
-```
-
-Les autres sous-commandes (`tirer`, `enregistrer`, `attente`, `statut`) sont appelées par les commandes Claude. Voir `python3 outils/prof.py -h`.
-
-## Structure des données
-
-Tous les identifiants de notion sont en kebab-case, sans accents.
-
-| Fichier | Contenu |
+| Chemin | Rôle |
 |---|---|
-| `data/livre.json` | Plan du livre de 2016 : `parties[]` (avec `titres[]`), `chapitres[]` (`numero`, `titre`, `partie`, `titre_partie`, `page_debut`, `page_fin`, `nb_pages`, `statut`, `table_detaillee_fournie`), `liminaires`, `fin_ouvrage`, `alertes`. Les pages de fin sont **déduites**. |
-| `data/notions.json` | `{"notions": {"<id>": {nom, nom_en, chapitre, definition, depend_de[], niveau, fragile, nb_reponses}}}`. Le niveau est recalculé depuis l'historique. |
-| `data/glossaire.json` | `{"termes": [{fr, en, definition, chapitre, notion}]}`. L'export CSV `terme FR, terme EN, définition courte, chapitre` arrive en phase 2. |
-| `data/questions/NN.json` | `{"chapitre", "questions": [...]}`. Voir `modeles/questions.json`. Champs : `id` (`NN-qXX`), `notions[]`, `type` (`qcm`, `vrai-faux`, `ouverte`, `calcul`, `cas`, `liaison`, `carte`), `correction` (`auto`, `auto-evaluee`, `claude`), `enonce`, `choix`, `reponse`, `tolerance`, `unite`, `reponse_modele`, `criteres`, `explication`, `difficulte`, `signalee`. |
-| `data/historique.jsonl` | Une ligne par réponse : `date`, `question_id`, `chapitre`, `type`, `notions`, `resultat` (`juste`, `partiel`, `faux`), `score` (1 / 0,5 / 0), `session`, `reponse`, `confiance` (optionnelle). |
-| `data/a-corriger.json` | `{"en_attente": [{date, question_id, reponse, origine}]}` : les réponses ouvertes à faire corriger par Claude. |
-| `data/revisions.json` | État de la répétition espacée par question (phase 2). |
-| `data/etat.json` | Synthèse compacte recalculée par `prof.py etat` : chapitre en cours, prochain chapitre, cartes dues, notions fragiles, dernière activité, rythme. |
-| `fiches/NN.md` | Fiche du chapitre (modèle : `modeles/fiche.md`). |
-| `calculs/NN.py` | Script qui produit tous les chiffres de la fiche et des questions. |
-| `PROGRESSION.md` | Journal lisible : une ligne par session. |
+| `content/livre.json` | Plan du livre de 2016 : 5 parties, titres, 55 chapitres, pages. Les pages de fin sont déduites ; les incohérences sont listées dans `alertes`. |
+| `modeles/` | Propositions de format pour la fiche et les questions, à valider en phase 0. |
+| `.claude/commands/` | Commandes Claude Code pour produire le contenu : `/prepare <chapitre>` et `/explique <notion>`. Ensuite (V1) : `/signalements` et `/coach-du-jour`. |
+| `CLAUDE.md` | Règles du professeur et conventions du projet. |
 
-Niveaux de maîtrise : `decouverte` → `comprise` → `appliquee` → `consolidee`. Les règles exactes sont dans `CLAUDE.md`.
+## Architecture pressentie (à valider en phase 0)
 
-## Feuille de route
-
-- [x] **Phase 1** : plan du livre, `/prepare`, `/quiz`, `/explique`, fiches, structure des données.
-- [ ] **Phase 2** : répétition espacée, `/revision`, `/exercice`, `/signaler`, `/bilan`, `/coach-du-jour` (et le prompt de la tâche planifiée ici), export CSV du glossaire, tests.
-- [ ] **Phase 3** (sur demande) : application mobile, sans API d'IA.
+- **Application :** PWA React + TypeScript (Vite), mobile-first, mode sombre.
+- **Contenu :** fichiers versionnés dans `content/`, validés par un schéma (Zod) au build. Un contenu invalide bloque le déploiement au lieu de casser l'application.
+- **Progression :** stockée sur l'appareil (IndexedDB) avec export et import dans le POC, puis synchronisée entre appareils (par exemple Supabase) en V1.
+- **Révisions :** algorithme FSRS, via une bibliothèque open source éprouvée.
+- **Hébergement :** déploiement automatique depuis GitHub (Vercel ou Netlify) à chaque push.
