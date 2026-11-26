@@ -1,0 +1,15 @@
+{
+  "rythme": {
+    "chapitres_par_semaine": 3,
+    "appareils": "ordinateur et telephone a parts egales"
+  },
+  "maj": "2026-11-26T17:44:57",
+  "chapitre_en_cours": null,
+  "prochain_chapitre_a_preparer": 1,
+  "chapitres_faits": [],
+  "cartes_dues": 0,
+  "reponses_a_corriger": 0,
+  "notions_fragiles": [],
+  "nb_reponses_total": 0,
+  "derniere_activite": null
+}

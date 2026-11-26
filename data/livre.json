@@ -1,0 +1,829 @@
+{
+  "ouvrage": "Finance d'entreprise",
+  "auteur": "Pierre Vernimmen (et coauteurs)",
+  "editeur": "Dalloz",
+  "edition": 2016,
+  "source": "Sommaire général transcrit depuis une photo fournie par Marine (2026-11-26).",
+  "convention_pages": "page_debut = page du sommaire ; page_fin = page de l'entrée suivante du sommaire moins 1 (déduite, inclut les questions et exercices de fin de chapitre).",
+  "liminaires": [
+    {
+      "titre": "On ne s'ennuie pas en finance !",
+      "page": "VI"
+    },
+    {
+      "titre": "Présentation de l'ouvrage",
+      "page": "XIII"
+    },
+    {
+      "titre": "Principaux symboles et sigles utilisés dans cet ouvrage",
+      "page": "XVI"
+    }
+  ],
+  "parties": [
+    {
+      "numero": 1,
+      "titre": "Le diagnostic financier",
+      "page": 17,
+      "titres": [
+        {
+          "numero": 1,
+          "titre": "Les mécanismes financiers fondamentaux",
+          "page": 19,
+          "chapitres": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "numero": 2,
+          "titre": "La lecture financière de la comptabilité",
+          "page": 89,
+          "chapitres": [
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "numero": 3,
+          "titre": "Le diagnostic financier : analyse et prévisions",
+          "page": 169,
+          "chapitres": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 2,
+      "titre": "Les investisseurs et la logique des marchés financiers",
+      "page": 321,
+      "titres": [
+        {
+          "numero": 1,
+          "titre": "La mécanique financière",
+          "page": 347,
+          "chapitres": [
+            17,
+            18,
+            19,
+            20
+          ]
+        },
+        {
+          "numero": 2,
+          "titre": "Le risque en finance",
+          "page": 397,
+          "chapitres": [
+            21,
+            22,
+            23
+          ]
+        },
+        {
+          "numero": 3,
+          "titre": "Les principaux titres financiers",
+          "page": 455,
+          "chapitres": [
+            24,
+            25,
+            26,
+            27,
+            28,
+            29
+          ]
+        }
+      ],
+      "chapitres_hors_titre": [
+        16
+      ]
+    },
+    {
+      "numero": 3,
+      "titre": "La valeur",
+      "page": 599,
+      "titres": [],
+      "chapitres_hors_titre": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "numero": 4,
+      "titre": "La politique financière",
+      "page": 727,
+      "titres": [
+        {
+          "numero": 1,
+          "titre": "La structure financière de l'entreprise",
+          "page": 729,
+          "chapitres": [
+            36,
+            37,
+            38,
+            39
+          ]
+        },
+        {
+          "numero": 2,
+          "titre": "La politique des capitaux propres et celle de l'endettement",
+          "page": 807,
+          "chapitres": [
+            40,
+            41,
+            42,
+            43
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 5,
+      "titre": "La gestion financière",
+      "page": 881,
+      "titres": [
+        {
+          "numero": 1,
+          "titre": "La gouvernance et l'ingénierie financière",
+          "page": 883,
+          "chapitres": [
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51
+          ]
+        },
+        {
+          "numero": 2,
+          "titre": "La gestion du besoin en fonds de roulement, de la trésorerie, des risques et de l'immobilier",
+          "page": 1057,
+          "chapitres": [
+            52,
+            53,
+            54,
+            55
+          ]
+        }
+      ]
+    }
+  ],
+  "chapitres": [
+    {
+      "numero": 1,
+      "titre": "Un premier aperçu de la finance",
+      "partie": null,
+      "titre_partie": null,
+      "page_debut": 1,
+      "page_fin": 16,
+      "nb_pages": 16,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 2,
+      "titre": "Les flux de trésorerie",
+      "partie": 1,
+      "titre_partie": 1,
+      "page_debut": 21,
+      "page_fin": 30,
+      "nb_pages": 10,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 3,
+      "titre": "Les résultats",
+      "partie": 1,
+      "titre_partie": 1,
+      "page_debut": 31,
+      "page_fin": 46,
+      "nb_pages": 16,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 4,
+      "titre": "L'actif économique et les ressources financières",
+      "partie": 1,
+      "titre_partie": 1,
+      "page_debut": 47,
+      "page_fin": 64,
+      "nb_pages": 18,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 5,
+      "titre": "Du résultat à la variation de l'endettement net",
+      "partie": 1,
+      "titre_partie": 1,
+      "page_debut": 65,
+      "page_fin": 88,
+      "nb_pages": 24,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 6,
+      "titre": "L'information comptable",
+      "partie": 1,
+      "titre_partie": 2,
+      "page_debut": 91,
+      "page_fin": 102,
+      "nb_pages": 12,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 7,
+      "titre": "Les comptes consolidés",
+      "partie": 1,
+      "titre_partie": 2,
+      "page_debut": 103,
+      "page_fin": 124,
+      "nb_pages": 22,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 8,
+      "titre": "Les points complexes de l'analyse des comptes",
+      "partie": 1,
+      "titre_partie": 2,
+      "page_debut": 125,
+      "page_fin": 168,
+      "nb_pages": 44,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 9,
+      "titre": "Introduction au diagnostic financier",
+      "partie": 1,
+      "titre_partie": 3,
+      "page_debut": 171,
+      "page_fin": 196,
+      "nb_pages": 26,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 10,
+      "titre": "L'analyse des marges : structure",
+      "partie": 1,
+      "titre_partie": 3,
+      "page_debut": 197,
+      "page_fin": 224,
+      "nb_pages": 28,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 11,
+      "titre": "L'analyse des marges : risques",
+      "partie": 1,
+      "titre_partie": 3,
+      "page_debut": 225,
+      "page_fin": 242,
+      "nb_pages": 18,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 12,
+      "titre": "L'analyse du besoin en fonds de roulement et des investissements",
+      "partie": 1,
+      "titre_partie": 3,
+      "page_debut": 243,
+      "page_fin": 270,
+      "nb_pages": 28,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 13,
+      "titre": "L'analyse du financement",
+      "partie": 1,
+      "titre_partie": 3,
+      "page_debut": 271,
+      "page_fin": 286,
+      "nb_pages": 16,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 14,
+      "titre": "L'analyse de la rentabilité comptable",
+      "partie": 1,
+      "titre_partie": 3,
+      "page_debut": 287,
+      "page_fin": 306,
+      "nb_pages": 20,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 15,
+      "titre": "Conclusion du diagnostic financier",
+      "partie": 1,
+      "titre_partie": 3,
+      "page_debut": 307,
+      "page_fin": 320,
+      "nb_pages": 14,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 16,
+      "titre": "Les marchés financiers",
+      "partie": 2,
+      "titre_partie": null,
+      "page_debut": 323,
+      "page_fin": 346,
+      "nb_pages": 24,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 17,
+      "titre": "La rémunération du temps",
+      "partie": 2,
+      "titre_partie": 1,
+      "page_debut": 349,
+      "page_fin": 360,
+      "nb_pages": 12,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 18,
+      "titre": "Capitalisation et actualisation",
+      "partie": 2,
+      "titre_partie": 1,
+      "page_debut": 361,
+      "page_fin": 370,
+      "nb_pages": 10,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 19,
+      "titre": "Valeur actuelle et valeur actuelle nette",
+      "partie": 2,
+      "titre_partie": 1,
+      "page_debut": 371,
+      "page_fin": 380,
+      "nb_pages": 10,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 20,
+      "titre": "Le taux de rentabilité actuariel",
+      "partie": 2,
+      "titre_partie": 1,
+      "page_debut": 381,
+      "page_fin": 396,
+      "nb_pages": 16,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 21,
+      "titre": "Le risque d'un titre financier",
+      "partie": 2,
+      "titre_partie": 2,
+      "page_debut": 399,
+      "page_fin": 414,
+      "nb_pages": 16,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 22,
+      "titre": "Risque et portefeuille",
+      "partie": 2,
+      "titre_partie": 2,
+      "page_debut": 415,
+      "page_fin": 432,
+      "nb_pages": 18,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 23,
+      "titre": "Taux de rentabilité exigé et marchés en équilibre",
+      "partie": 2,
+      "titre_partie": 2,
+      "page_debut": 433,
+      "page_fin": 454,
+      "nb_pages": 22,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 24,
+      "titre": "L'obligation",
+      "partie": 2,
+      "titre_partie": 3,
+      "page_debut": 457,
+      "page_fin": 480,
+      "nb_pages": 24,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 25,
+      "titre": "Les autres produits de dette",
+      "partie": 2,
+      "titre_partie": 3,
+      "page_debut": 481,
+      "page_fin": 500,
+      "nb_pages": 20,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 26,
+      "titre": "L'action",
+      "partie": 2,
+      "titre_partie": 3,
+      "page_debut": 501,
+      "page_fin": 524,
+      "nb_pages": 24,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 27,
+      "titre": "L'option",
+      "partie": 2,
+      "titre_partie": 3,
+      "page_debut": 525,
+      "page_fin": 548,
+      "nb_pages": 24,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 28,
+      "titre": "Les titres hybrides",
+      "partie": 2,
+      "titre_partie": 3,
+      "page_debut": 549,
+      "page_fin": 568,
+      "nb_pages": 20,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 29,
+      "titre": "Le placement des titres financiers",
+      "partie": 2,
+      "titre_partie": 3,
+      "page_debut": 569,
+      "page_fin": 598,
+      "nb_pages": 30,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 30,
+      "titre": "Valeur et finance d'entreprise",
+      "partie": 3,
+      "titre_partie": null,
+      "page_debut": 601,
+      "page_fin": 622,
+      "nb_pages": 22,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 31,
+      "titre": "Les mesures de la création de valeur",
+      "partie": 3,
+      "titre_partie": null,
+      "page_debut": 623,
+      "page_fin": 640,
+      "nb_pages": 18,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 32,
+      "titre": "Le choix d'investissement",
+      "partie": 3,
+      "titre_partie": null,
+      "page_debut": 641,
+      "page_fin": 658,
+      "nb_pages": 18,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 33,
+      "titre": "Le coût du capital",
+      "partie": 3,
+      "titre_partie": null,
+      "page_debut": 659,
+      "page_fin": 678,
+      "nb_pages": 20,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 34,
+      "titre": "Le risque dans l'investissement",
+      "partie": 3,
+      "titre_partie": null,
+      "page_debut": 679,
+      "page_fin": 692,
+      "nb_pages": 14,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 35,
+      "titre": "La pratique de l'évaluation de l'entreprise",
+      "partie": 3,
+      "titre_partie": null,
+      "page_debut": 693,
+      "page_fin": 726,
+      "nb_pages": 34,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 36,
+      "titre": "Structure financière et théorie des marchés en équilibre",
+      "partie": 4,
+      "titre_partie": 1,
+      "page_debut": 731,
+      "page_fin": 744,
+      "nb_pages": 14,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 37,
+      "titre": "Structure financière, fiscalité et théorie des organisations",
+      "partie": 4,
+      "titre_partie": 1,
+      "page_debut": 745,
+      "page_fin": 762,
+      "nb_pages": 18,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 38,
+      "titre": "Endettement, capitaux propres et théorie des options",
+      "partie": 4,
+      "titre_partie": 1,
+      "page_debut": 763,
+      "page_fin": 784,
+      "nb_pages": 22,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 39,
+      "titre": "Choisir sa structure financière",
+      "partie": 4,
+      "titre_partie": 1,
+      "page_debut": 785,
+      "page_fin": 806,
+      "nb_pages": 22,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 40,
+      "titre": "La politique de distribution ou rendre de l'argent aux actionnaires",
+      "partie": 4,
+      "titre_partie": 2,
+      "page_debut": 809,
+      "page_fin": 826,
+      "nb_pages": 18,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 41,
+      "titre": "La mise en œuvre de la politique de distribution : dividendes, rachats d'actions et réductions de capital",
+      "partie": 4,
+      "titre_partie": 2,
+      "page_debut": 827,
+      "page_fin": 846,
+      "nb_pages": 20,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 42,
+      "titre": "L'augmentation de capital en numéraire",
+      "partie": 4,
+      "titre_partie": 2,
+      "page_debut": 847,
+      "page_fin": 860,
+      "nb_pages": 14,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 43,
+      "titre": "La mise en œuvre de la politique d'endettement",
+      "partie": 4,
+      "titre_partie": 2,
+      "page_debut": 861,
+      "page_fin": 880,
+      "nb_pages": 20,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 44,
+      "titre": "La création d'entreprise ou le financement des start-up",
+      "partie": 5,
+      "titre_partie": 1,
+      "page_debut": 885,
+      "page_fin": 906,
+      "nb_pages": 22,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 45,
+      "titre": "L'actionnariat et l'organisation d'un groupe",
+      "partie": 5,
+      "titre_partie": 1,
+      "page_debut": 907,
+      "page_fin": 932,
+      "nb_pages": 26,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 46,
+      "titre": "L'introduction en Bourse",
+      "partie": 5,
+      "titre_partie": 1,
+      "page_debut": 933,
+      "page_fin": 946,
+      "nb_pages": 14,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 47,
+      "titre": "La gouvernance d'entreprise",
+      "partie": 5,
+      "titre_partie": 1,
+      "page_debut": 947,
+      "page_fin": 962,
+      "nb_pages": 16,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 48,
+      "titre": "Les négociations du contrôle",
+      "partie": 5,
+      "titre_partie": 1,
+      "page_debut": 963,
+      "page_fin": 994,
+      "nb_pages": 32,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 49,
+      "titre": "Les fusions et les scissions",
+      "partie": 5,
+      "titre_partie": 1,
+      "page_debut": 995,
+      "page_fin": 1014,
+      "nb_pages": 20,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 50,
+      "titre": "Les LBO",
+      "partie": 5,
+      "titre_partie": 1,
+      "page_debut": 1015,
+      "page_fin": 1032,
+      "nb_pages": 18,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 51,
+      "titre": "Les faillites et les restructurations",
+      "partie": 5,
+      "titre_partie": 1,
+      "page_debut": 1033,
+      "page_fin": 1056,
+      "nb_pages": 24,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 52,
+      "titre": "La gestion du besoin en fonds de roulement",
+      "partie": 5,
+      "titre_partie": 2,
+      "page_debut": 1059,
+      "page_fin": 1074,
+      "nb_pages": 16,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 53,
+      "titre": "La gestion de trésorerie",
+      "partie": 5,
+      "titre_partie": 2,
+      "page_debut": 1075,
+      "page_fin": 1096,
+      "nb_pages": 22,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 54,
+      "titre": "La gestion des risques dans l'entreprise",
+      "partie": 5,
+      "titre_partie": 2,
+      "page_debut": 1097,
+      "page_fin": 1124,
+      "nb_pages": 28,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    },
+    {
+      "numero": 55,
+      "titre": "La gestion de l'immobilier d'exploitation",
+      "partie": 5,
+      "titre_partie": 2,
+      "page_debut": 1125,
+      "page_fin": 1138,
+      "nb_pages": 14,
+      "statut": "a-preparer",
+      "table_detaillee_fournie": false
+    }
+  ],
+  "fin_ouvrage": [
+    {
+      "titre": "Finance et stratégie en guise de post-face",
+      "page_debut": 1139,
+      "page_fin": 1148
+    },
+    {
+      "titre": "Annexes",
+      "page_debut": 1149,
+      "page_fin": 1160
+    },
+    {
+      "titre": "Glossaire",
+      "page_debut": 1161,
+      "page_fin": 1162
+    },
+    {
+      "titre": "Index des notions",
+      "page_debut": 1163,
+      "page_fin": 1184
+    },
+    {
+      "titre": "Index des noms propres",
+      "page_debut": 1185,
+      "page_fin": 1186
+    },
+    {
+      "titre": "Table des matières détaillée",
+      "page_debut": 1187,
+      "page_fin": null
+    }
+  ],
+  "alertes": [
+    "À vérifier : le Glossaire du livre ne ferait que 2 pages (p. 1161-1162), ce qui est court. Erreur de lecture possible de la page 1161 ou 1163.",
+    "Le chapitre 1 n'appartient à aucune partie (pages liminaires). Le chapitre 16 ouvre la Partie 2 hors Titre."
+  ]
+}

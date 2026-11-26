@@ -1,0 +1,75 @@
+{
+  "_aide": "Modèle de data/questions/NN.json. Copier la structure, pas le contenu. Une entrée par type pour illustrer.",
+  "chapitre": 12,
+  "questions": [
+    {
+      "id": "12-q01",
+      "chapitre": 12,
+      "notions": ["bfr"],
+      "type": "qcm",
+      "correction": "auto",
+      "enonce": "Une hausse des délais de paiement clients, toutes choses égales par ailleurs :",
+      "choix": ["augmente le BFR", "diminue le BFR", "n'a pas d'effet sur le BFR", "diminue l'excédent brut d'exploitation"],
+      "reponse": "augmente le BFR",
+      "explication": "Les créances clients sont un emploi d'exploitation : plus elles durent, plus le BFR est élevé. L'EBE n'est pas modifié.",
+      "difficulte": 1,
+      "signalee": false,
+      "creee_le": "2026-11-26"
+    },
+    {
+      "id": "12-q02",
+      "chapitre": 12,
+      "notions": ["bfr"],
+      "type": "vrai-faux",
+      "correction": "auto",
+      "enonce": "Un BFR négatif est toujours le signe d'une entreprise en difficulté.",
+      "reponse": false,
+      "explication": "Faux : la grande distribution a structurellement un BFR négatif (clients payés comptant, fournisseurs à terme). C'est une ressource, pas un signal de difficulté.",
+      "difficulte": 1,
+      "signalee": false,
+      "creee_le": "2026-11-26"
+    },
+    {
+      "id": "12-q03",
+      "chapitre": 12,
+      "notions": ["bfr"],
+      "type": "calcul",
+      "correction": "auto",
+      "enonce": "CA annuel 3 650 k€, crédit clients de 60 jours de CA. Créances clients (k€) ?",
+      "reponse": 600,
+      "tolerance": 0.5,
+      "unite": "k€",
+      "explication": "3 650 / 365 × 60 = 600 k€ (calculs/12.py).",
+      "difficulte": 1,
+      "signalee": false,
+      "creee_le": "2026-11-26"
+    },
+    {
+      "id": "12-q04",
+      "chapitre": 12,
+      "notions": ["bfr", "flux-tresorerie-disponible"],
+      "type": "liaison",
+      "correction": "claude",
+      "enonce": "Explique pourquoi une entreprise en forte croissance peut être rentable et manquer de trésorerie.",
+      "reponse_modele": "La croissance augmente le BFR (stocks et créances suivent le CA). Cette hausse est un emploi qui réduit le flux de trésorerie disponible, même avec un résultat positif.",
+      "criteres": ["lien croissance → hausse du BFR", "hausse du BFR = emploi de trésorerie", "résultat ≠ trésorerie"],
+      "explication": "Liaison BFR → flux de trésorerie disponible.",
+      "difficulte": 2,
+      "signalee": false,
+      "creee_le": "2026-11-26"
+    },
+    {
+      "id": "12-q05",
+      "chapitre": 12,
+      "notions": ["bfr"],
+      "type": "carte",
+      "correction": "auto-evaluee",
+      "enonce": "BFR d'exploitation : définition ?",
+      "reponse_modele": "Stocks + créances clients − dettes fournisseurs (+ autres créances et dettes d'exploitation).",
+      "explication": "Carte recto/verso auto-évaluée.",
+      "difficulte": 1,
+      "signalee": false,
+      "creee_le": "2026-11-26"
+    }
+  ]
+}
