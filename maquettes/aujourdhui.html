@@ -1,0 +1,284 @@
+<title>Vernimmen Teacher · Aujourd'hui</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Maquette phase 0 : deux directions pour l'écran « Aujourd'hui ».
+   Mobile : sélecteur A/B. Large : les deux téléphones côte à côte. */
+:root {
+  /* page hôte */
+  --page: #E9EAEC; --page-fg: #2A2D33; --page-muted: #6A6F78;
+  /* A · Éditorial : papier froid, encre bleu nuit */
+  --a-bg: #F5F5F1; --a-fg: #1C1E22; --a-muted: #6A6C70; --a-rule: #DAD9D2; --a-accent: #27467A; --a-accent-fg: #F5F5F1; --a-soft: #E9ECF2;
+  /* B · Pilotage : surfaces neutres, couleurs d'état */
+  --b-bg: #F2F4F7; --b-surface: #FFFFFF; --b-fg: #101722; --b-muted: #5E6878; --b-line: #DDE2EA; --b-accent: #1F5FBF; --b-ok: #1E7A4C; --b-warn: #A86200; --b-crit: #B3261E; --b-warn-bg: #FFF4E0; --b-track: #E6EAF0;
+  --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --sans-a: "Instrument Sans", -apple-system, "Segoe UI", sans-serif;
+  --sans-b: "IBM Plex Sans", -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --page: #0B0C0E; --page-fg: #DADDE2; --page-muted: #8B9098;
+  --a-bg: #17181B; --a-fg: #E7E4DC; --a-muted: #9C9A93; --a-rule: #2E2F33; --a-accent: #9DB5DE; --a-accent-fg: #14161A; --a-soft: #22262E;
+  --b-bg: #0E1116; --b-surface: #171B22; --b-fg: #E6EAF0; --b-muted: #929BAA; --b-line: #2A303A; --b-accent: #6FA2F0; --b-ok: #5BC48A; --b-warn: #E5A64A; --b-crit: #F07A72; --b-warn-bg: #2B2214; --b-track: #262C36;
+  color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --page: #0B0C0E; --page-fg: #DADDE2; --page-muted: #8B9098;
+  --a-bg: #17181B; --a-fg: #E7E4DC; --a-muted: #9C9A93; --a-rule: #2E2F33; --a-accent: #9DB5DE; --a-accent-fg: #14161A; --a-soft: #22262E;
+  --b-bg: #0E1116; --b-surface: #171B22; --b-fg: #E6EAF0; --b-muted: #929BAA; --b-line: #2A303A; --b-accent: #6FA2F0; --b-ok: #5BC48A; --b-warn: #E5A64A; --b-crit: #F07A72; --b-warn-bg: #2B2214; --b-track: #262C36;
+  color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--page); color: var(--page-fg); font-family: var(--sans-a); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 20px 32px; }
+button { font: inherit; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--b-accent); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+.intro { max-width: 860px; margin: 0 auto 16px; display: grid; gap: 6px; }
+.intro h1 { font: 600 1.05rem/1.3 var(--sans-a); margin: 0; text-wrap: balance; }
+.intro p { margin: 0; color: var(--page-muted); font-size: .85rem; line-height: 1.45; }
+.switch { display: flex; gap: 4px; padding: 4px; background: color-mix(in srgb, var(--page-fg) 8%, transparent); border-radius: 10px; width: fit-content; }
+.switch button { border: 0; background: transparent; color: var(--page-fg); padding: 7px 14px; border-radius: 7px; font-size: .85rem; font-weight: 500; }
+.switch button[aria-pressed="true"] { background: var(--page); box-shadow: 0 1px 2px rgb(0 0 0 / .15); }
+
+.stage { display: grid; gap: 28px; justify-content: center; grid-template-columns: minmax(0, 400px); }
+.col { display: grid; gap: 8px; min-width: 0; }
+.col > .label { font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--page-muted); font-weight: 600; }
+@media (min-width: 900px) { .stage { grid-template-columns: repeat(2, minmax(0, 400px)); } .switch { display: none; } .col[hidden] { display: grid !important; } }
+
+.phone { border-radius: 28px; overflow: hidden; min-height: 760px; display: flex; flex-direction: column; box-shadow: 0 1px 0 rgb(0 0 0 / .04), 0 12px 32px rgb(0 0 0 / .10); }
+.screen { flex: 1; display: flex; flex-direction: column; gap: 0; }
+.example { font-size: .68rem; letter-spacing: .05em; text-transform: uppercase; text-align: center; padding: 6px; }
+
+/* ---------- A · Éditorial ---------- */
+.a { background: var(--a-bg); color: var(--a-fg); font-family: var(--sans-a); }
+.a .example { color: var(--a-muted); border-bottom: 1px solid var(--a-rule); }
+.a .content { flex: 1; padding: 20px 24px 8px; display: grid; gap: 26px; align-content: start; }
+.a .top { display: flex; justify-content: space-between; align-items: center; }
+.a .date { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--a-muted); font-weight: 600; }
+.a .icon-btn { border: 0; background: none; color: var(--a-fg); padding: 6px; margin: -6px; }
+.a .hero { display: grid; gap: 14px; }
+.a .hero h2 { font: 500 2.5rem/1.02 var(--serif); margin: 0; letter-spacing: -.01em; text-wrap: balance; }
+.a .hero h2 em { font-style: italic; color: var(--a-accent); }
+.a .hero p { margin: 0; color: var(--a-muted); font-size: .92rem; line-height: 1.5; }
+.a .primary { border: 0; background: var(--a-accent); color: var(--a-accent-fg); padding: 14px 18px; border-radius: 12px; font-weight: 600; font-size: .98rem; text-align: left; display: flex; justify-content: space-between; align-items: center; }
+.a section { display: grid; gap: 10px; border-top: 1px solid var(--a-rule); padding-top: 16px; }
+.a .kicker { font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--a-muted); font-weight: 600; }
+.a .chap { display: grid; gap: 4px; }
+.a .chap .num { font: italic 400 .95rem/1 var(--serif); color: var(--a-muted); }
+.a .chap h3 { font: 500 1.45rem/1.15 var(--serif); margin: 0; }
+.a .chap .meta { font-size: .82rem; color: var(--a-muted); font-variant-numeric: tabular-nums; }
+.a .actions { display: flex; gap: 16px; flex-wrap: wrap; }
+.a .link { border: 0; background: none; color: var(--a-accent); padding: 0; font-weight: 600; font-size: .9rem; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.a blockquote { margin: 0; font: 400 1.1rem/1.4 var(--serif); }
+.a .notion { font-size: .8rem; color: var(--a-muted); }
+.a .week { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.a .dots { display: flex; gap: 7px; }
+.a .dots span { width: 22px; display: grid; justify-items: center; gap: 4px; font-size: .66rem; color: var(--a-muted); }
+.a .dots i { width: 8px; height: 8px; border-radius: 50%; border: 1px solid var(--a-muted); }
+.a .dots i.on { background: var(--a-fg); border-color: var(--a-fg); }
+.a .dots .today i { outline: 2px solid var(--a-accent); outline-offset: 2px; }
+.a .streak { font: 500 1rem/1.2 var(--serif); text-align: right; }
+.a .note { font-size: .8rem; color: var(--a-muted); background: var(--a-soft); padding: 10px 12px; border-radius: 10px; display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+.a .tabbar { border-top: 1px solid var(--a-rule); }
+.a .tabbar button { color: var(--a-muted); }
+.a .tabbar button[aria-current] { color: var(--a-fg); }
+
+/* ---------- B · Pilotage ---------- */
+.b { background: var(--b-bg); color: var(--b-fg); font-family: var(--sans-b); }
+.b .example { color: var(--b-muted); border-bottom: 1px solid var(--b-line); }
+.b .content { flex: 1; padding: 16px 16px 8px; display: grid; gap: 12px; align-content: start; }
+.b .top { display: flex; justify-content: space-between; align-items: baseline; }
+.b .top h2 { margin: 0; font-size: 1.35rem; font-weight: 600; }
+.b .top .d { font-size: .8rem; color: var(--b-muted); }
+.b .icon-btn { border: 0; background: none; color: var(--b-fg); padding: 6px; margin: -6px; }
+.b .kpis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.b .kpi { background: var(--b-surface); border: 1px solid var(--b-line); border-radius: 10px; padding: 10px; display: grid; gap: 2px; }
+.b .kpi b { font: 500 1.5rem/1.1 var(--mono); font-variant-numeric: tabular-nums; }
+.b .kpi span { font-size: .72rem; color: var(--b-muted); }
+.b .kpi.due b { color: var(--b-accent); }
+.b .card { background: var(--b-surface); border: 1px solid var(--b-line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.b .card h3 { margin: 0; font-size: .72rem; text-transform: uppercase; letter-spacing: .07em; color: var(--b-muted); font-weight: 600; }
+.b .next { border-color: var(--b-accent); }
+.b .next p { margin: 0; font-size: 1rem; font-weight: 500; line-height: 1.35; }
+.b .next small { color: var(--b-muted); font-size: .8rem; }
+.b .primary { border: 0; background: var(--b-accent); color: var(--b-surface); padding: 12px; border-radius: 9px; font-weight: 600; }
+.b .row { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; font-size: .9rem; }
+.b .row .m { font-family: var(--mono); font-size: .8rem; color: var(--b-muted); font-variant-numeric: tabular-nums; }
+.b .bar { height: 6px; background: var(--b-track); border-radius: 3px; overflow: hidden; }
+.b .bar i { display: block; height: 100%; background: var(--b-accent); }
+.b .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.b .chip { font-size: .78rem; padding: 4px 8px; border-radius: 999px; border: 1px solid var(--b-line); display: inline-flex; gap: 6px; align-items: center; }
+.b .chip::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--b-crit); }
+.b .chip.w::before { background: var(--b-warn); }
+.b .heat { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
+.b .heat i { aspect-ratio: 1; border-radius: 4px; background: var(--b-track); max-width: 100%; }
+.b .heat i.l1 { background: color-mix(in srgb, var(--b-ok) 40%, var(--b-track)); }
+.b .heat i.l2 { background: color-mix(in srgb, var(--b-ok) 70%, var(--b-track)); }
+.b .heat i.l3 { background: var(--b-ok); }
+.b .heat i.today { outline: 2px solid var(--b-fg); outline-offset: 1px; }
+.b .alert { background: var(--b-warn-bg); color: var(--b-fg); border-radius: 10px; padding: 10px 12px; font-size: .82rem; display: flex; justify-content: space-between; gap: 10px; align-items: center; border-left: 3px solid var(--b-warn); }
+.b .alert button, .a .note button { border: 0; background: none; font-weight: 600; padding: 0; white-space: nowrap; }
+.b .alert button { color: var(--b-warn); }
+.a .note button { color: var(--a-accent); }
+.b .tabbar { border-top: 1px solid var(--b-line); background: var(--b-surface); }
+.b .tabbar button { color: var(--b-muted); }
+.b .tabbar button[aria-current] { color: var(--b-accent); }
+
+.tabbar { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 8px 4px 14px; }
+.tabbar button { border: 0; background: none; display: grid; justify-items: center; gap: 3px; font-size: .68rem; font-weight: 500; }
+.tabbar svg { width: 22px; height: 22px; }
+svg { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+.toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--page-fg); color: var(--page); padding: 10px 14px; border-radius: 10px; font-size: .85rem; max-width: calc(100% - 32px); }
+</style>
+
+<header class="intro">
+  <h1>Écran « Aujourd'hui » : deux directions</h1>
+  <p>Maquette statique de phase 0. Les chiffres sont des exemples. Comparez la hiérarchie et l'ambiance, pas les données.</p>
+  <div class="switch" role="group" aria-label="Choisir la direction">
+    <button id="sw-a" aria-pressed="true" data-show="a">A · Éditorial</button>
+    <button id="sw-b" aria-pressed="false" data-show="b">B · Pilotage</button>
+  </div>
+</header>
+
+<main class="stage">
+  <!-- Direction A -->
+  <div class="col" id="col-a">
+    <div class="label">A · Éditorial</div>
+    <div class="phone a">
+      <div class="screen">
+        <div class="example">Données d'exemple</div>
+        <div class="content">
+          <div class="top">
+            <span class="date">Jeudi 26 novembre</span>
+            <button class="icon-btn" aria-label="Rechercher"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg></button>
+          </div>
+
+          <div class="hero">
+            <h2><em>18</em> questions à revoir aujourd'hui</h2>
+            <p>Environ 16 minutes. Chapitres 1 et 2, dont 3 questions ratées hier.</p>
+            <button class="primary">Réviser maintenant <span aria-hidden="true">→</span></button>
+          </div>
+
+          <section>
+            <span class="kicker">En lecture</span>
+            <div class="chap">
+              <span class="num">Chapitre 3</span>
+              <h3>Les résultats</h3>
+              <span class="meta">Partie 1 · Titre 1 · p. 31–46 · 16 pages</span>
+            </div>
+            <div class="actions">
+              <button class="link">Lire la fiche</button>
+              <button class="link">J'ai lu ce chapitre</button>
+            </div>
+          </section>
+
+          <section>
+            <span class="kicker">Notion fragile</span>
+            <blockquote>Pourquoi une hausse du BFR réduit-elle la trésorerie alors que le résultat ne change pas ?</blockquote>
+            <span class="notion">Variation du BFR · ch. 2 · ratée 2 fois sur 3</span>
+            <div class="actions"><button class="link">Répondre</button></div>
+          </section>
+
+          <section>
+            <div class="week">
+              <div class="dots" aria-label="Activité de la semaine">
+                <span><i class="on"></i>L</span><span><i class="on"></i>M</span><span><i class="on"></i>M</span><span class="today"><i></i>J</span><span><i></i>V</span><span><i></i>S</span><span><i></i>D</span>
+              </div>
+              <div class="streak">5 jours<br><span class="notion">d'affilée</span></div>
+            </div>
+          </section>
+
+          <div class="note">Dernière sauvegarde il y a 8 jours. <button>Exporter</button></div>
+        </div>
+        <nav class="tabbar" aria-label="Navigation">
+          <button aria-current="page"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></svg>Aujourd'hui</button>
+          <button><svg viewBox="0 0 24 24"><path d="M4 5.5C6.5 4 9.5 4 12 6c2.5-2 5.5-2 8-.5V19c-2.5-1.5-5.5-1.5-8 .5-2.5-2-5.5-2-8-.5z"/><path d="M12 6v13.5"/></svg>Livre</button>
+          <button><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.7"/><path d="M20 4v4h-4"/></svg>Réviser</button>
+          <button><svg viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M7 16v-5M12 16V7M17 16v-8"/></svg>Progression</button>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- Direction B -->
+  <div class="col" id="col-b" hidden>
+    <div class="label">B · Pilotage</div>
+    <div class="phone b">
+      <div class="screen">
+        <div class="example">Données d'exemple</div>
+        <div class="content">
+          <div class="top">
+            <h2>Aujourd'hui</h2>
+            <span class="d">jeu. 26 nov.</span>
+            <button class="icon-btn" aria-label="Rechercher"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg></button>
+          </div>
+
+          <div class="kpis">
+            <div class="kpi due"><b>18</b><span>révisions dues</span></div>
+            <div class="kpi"><b>5 j</b><span>série active</span></div>
+            <div class="kpi"><b>9/24</b><span>notions comprises</span></div>
+          </div>
+
+          <div class="card next">
+            <h3>Prochaine action</h3>
+            <p>Réviser 18 questions, puis lire le ch. 3 (p. 31–46)</p>
+            <small>≈ 16 min de révision · 3 questions ratées hier</small>
+            <button class="primary">Réviser maintenant</button>
+          </div>
+
+          <div class="card">
+            <h3>Lecture · Partie 1</h3>
+            <div class="row"><span>Ch. 3 · Les résultats</span><span class="m">préparé</span></div>
+            <div class="bar" aria-label="2 chapitres lus sur 14"><i style="width:14.3%"></i></div>
+            <div class="row"><span class="m">2/14 chapitres lus</span><span class="m">objectif 3/sem.</span></div>
+          </div>
+
+          <div class="card">
+            <h3>Notions fragiles</h3>
+            <div class="chips">
+              <span class="chip">Variation du BFR</span>
+              <span class="chip w">Flux de trésorerie disponible</span>
+              <span class="chip w">Capacité d'autofinancement</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>4 dernières semaines</h3>
+            <div class="heat" aria-label="Calendrier d'activité">
+              <i></i><i></i><i class="l1"></i><i></i><i></i><i></i><i></i>
+              <i class="l1"></i><i class="l2"></i><i></i><i class="l1"></i><i class="l3"></i><i></i><i></i>
+              <i class="l2"></i><i class="l2"></i><i class="l1"></i><i></i><i class="l2"></i><i class="l1"></i><i></i>
+              <i class="l3"></i><i class="l2"></i><i class="l3"></i><i class="today"></i><i></i><i></i><i></i>
+            </div>
+          </div>
+
+          <div class="alert">Sauvegarde : dernière il y a 8 jours <button>Exporter</button></div>
+        </div>
+        <nav class="tabbar" aria-label="Navigation">
+          <button aria-current="page"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></svg>Aujourd'hui</button>
+          <button><svg viewBox="0 0 24 24"><path d="M4 5.5C6.5 4 9.5 4 12 6c2.5-2 5.5-2 8-.5V19c-2.5-1.5-5.5-1.5-8 .5-2.5-2-5.5-2-8-.5z"/><path d="M12 6v13.5"/></svg>Livre</button>
+          <button><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.7"/><path d="M20 4v4h-4"/></svg>Réviser</button>
+          <button><svg viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M7 16v-5M12 16V7M17 16v-8"/></svg>Progression</button>
+        </nav>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="toast" id="toast" role="status" hidden>Cet écran viendra dans la maquette complète.</div>
+
+<script>
+  const cols = { a: document.getElementById('col-a'), b: document.getElementById('col-b') };
+  document.querySelectorAll('.switch button').forEach(btn => btn.addEventListener('click', () => {
+    const k = btn.dataset.show;
+    cols.a.hidden = k !== 'a'; cols.b.hidden = k !== 'b';
+    document.querySelectorAll('.switch button').forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+  }));
+  const toast = document.getElementById('toast'); let t;
+  document.querySelectorAll('.phone button').forEach(b => b.addEventListener('click', () => {
+    toast.hidden = false; clearTimeout(t); t = setTimeout(() => { toast.hidden = true; }, 1800);
+  }));
+</script>
